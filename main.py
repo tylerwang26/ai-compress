@@ -172,9 +172,7 @@ async def decompress(req: DecompressRequest):
     dalle_prompt = (
         "Reconstruct the following image as faithfully as possible based on this compressed textual description. "
         "Render it as a high-quality, photorealistic or stylistically accurate image. "
-        "Description:
-
-" + req.prompt
+        "Description:\n\n" + req.prompt
     )
 
     t0 = time.time()
